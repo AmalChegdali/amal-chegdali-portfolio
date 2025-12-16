@@ -294,3 +294,77 @@
   }
 }
 
+/* Dark Mode */
+body.dark-mode .github-projects-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .filter-btn {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+body.dark-mode .filter-btn:hover {
+  border-color: rgba(90, 159, 212, 0.5);
+  color: #5a9fd4;
+}
+
+body.dark-mode .filter-btn.active {
+  background: linear-gradient(135deg, #5a9fd4 0%, #4a8fc4 100%);
+  color: white;
+  border-color: #5a9fd4;
+}
+
+body.dark-mode .project-card {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-card:hover {
+  border-color: rgba(90, 159, 212, 0.5);
+}
+
+body.dark-mode .project-title {
+  color: #e2e8f0;
+}
+
+body.dark-mode .project-description {
+  color: #94a3b8;
+}
+
+body.dark-mode .project-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-stars {
+  color: #94a3b8;
+}
+
+body.dark-mode .project-updated {
+  color: #94a3b8;
+}
+
+body.dark-mode .project-link {
+  color: #5a9fd4;
+}
+
+body.dark-mode .project-topics {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-topic {
+  background: rgba(90, 159, 212, 0.2);
+  color: #5a9fd4;
+}
+
+body.dark-mode .projects-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .no-projects,
+body.dark-mode .projects-loading,
+body.dark-mode .projects-error {
+  color: #94a3b8;
+}
+

@@ -30,35 +30,36 @@
 
 /* Dark Mode Variables */
 body.dark-mode {
-  background-color: #2d2d2d;
-  color: #e8e8e8;
+  background-color: #1a1a2e;
+  color: #e2e8f0;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* General paragraph styles in dark mode */
 body.dark-mode p {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode div p {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .soft-skills-section,
 body.dark-mode .skills,
+body.dark-mode .skills-professional,
 body.dark-mode .education,
 body.dark-mode .experience,
 body.dark-mode .portfolio,
 body.dark-mode .stats-section {
-  background-color: #333333 !important;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
 }
 
 body.dark-mode .soft-skill-card,
 body.dark-mode .project-card,
 body.dark-mode .linkedin-card {
-  background-color: #3d3d3d !important;
-  border-color: #4d4d4d !important;
-  color: #e8e8e8 !important;
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -66,26 +67,26 @@ body.dark-mode .soft-skill-card:hover,
 body.dark-mode .project-card:hover,
 body.dark-mode .linkedin-card:hover {
   box-shadow: 0 15px 40px rgba(90, 159, 212, 0.2) !important;
-  border-color: #5a9fd4 !important;
+  border-color: rgba(90, 159, 212, 0.5) !important;
 }
 
 body.dark-mode .soft-skill-name,
 body.dark-mode .project-title,
 body.dark-mode .linkedin-title {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .soft-skill-progress-bar,
 body.dark-mode .project-description,
 body.dark-mode .linkedin-description {
-  background-color: #4d4d4d !important;
-  color: #c8c8c8 !important;
+  background-color: transparent !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .section-subtitle,
 body.dark-mode .project-description,
 body.dark-mode .timeline-content .description {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .gradient-text {
@@ -96,40 +97,84 @@ body.dark-mode .gradient-text {
 }
 
 body.dark-mode nav.navbar.bootsnav {
-  background-color: #3d3d3d !important;
-  border-bottom-color: #4d4d4d !important;
+  background-color: #1e293b !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode nav.navbar.bootsnav.no-background {
+  background-color: #1e293b !important;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
 }
 
 body.dark-mode .navbar-nav a {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
-body.dark-mode .navbar-nav a:hover {
+body.dark-mode .navbar-nav a:hover,
+body.dark-mode .navbar-nav a:focus,
+body.dark-mode .navbar-nav li.active > a {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .navbar-header a.navbar-brand,
+body.dark-mode .navbar-header a.navbar-brand:hover,
+body.dark-mode .navbar-header a.navbar-brand:focus {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .navbar-toggle {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .navbar-toggle:hover {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .sticky-wrapper.is-sticky nav.navbar.bootsnav {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,
+body.dark-mode .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,
+body.dark-mode .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active > a {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .language-btn {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .language-btn:hover {
   color: #5a9fd4 !important;
 }
 
 body.dark-mode footer.footer-copyright {
-  background-color: #2d2d2d !important;
-  color: #c8c8c8 !important;
+  background-color: #1a1a2e !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .contact {
-  background-color: #333333 !important;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
 }
 
 /* Education Section Dark Mode */
 body.dark-mode .education .timeline {
-  background-color: #3d3d3d !important;
-  border-color: #4d4d4d !important;
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.dark-mode .education .timeline:hover {
   box-shadow: 0 10px 30px rgba(90, 159, 212, 0.2) !important;
+  border-color: rgba(90, 159, 212, 0.5) !important;
 }
 
 body.dark-mode .education .timeline-content .title {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .education .timeline-content h5 {
@@ -137,7 +182,7 @@ body.dark-mode .education .timeline-content h5 {
 }
 
 body.dark-mode .single-horizontal-timeline .experience-time h2 {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .single-horizontal-timeline .experience-time h3 {
@@ -145,13 +190,13 @@ body.dark-mode .single-horizontal-timeline .experience-time h3 {
 }
 
 body.dark-mode .timeline-horizontal-border i {
-  border-color: #3d3d3d !important;
+  border-color: #1e293b !important;
 }
 
 /* Stats Section Dark Mode */
 body.dark-mode .stat-card {
-  background-color: #3d3d3d !important;
-  border-color: #4d4d4d !important;
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -160,7 +205,7 @@ body.dark-mode .stat-card:hover {
 }
 
 body.dark-mode .stat-label {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .stat-icon {
@@ -169,14 +214,14 @@ body.dark-mode .stat-icon {
 
 /* Skills Section Dark Mode */
 body.dark-mode .skill-card {
-  background-color: #3d3d3d !important;
-  border-color: #4d4d4d !important;
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.dark-mode .skill-card:hover {
   box-shadow: 0 12px 40px rgba(90, 159, 212, 0.25) !important;
-  border-color: #5a9fd4 !important;
+  border-color: rgba(90, 159, 212, 0.5) !important;
 }
 
 body.dark-mode .skill-card::before {
@@ -189,23 +234,23 @@ body.dark-mode .skill-card:hover::before {
 }
 
 body.dark-mode .skill-name {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .skill-years {
-  color: #b0b0b0 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .skill-level-label {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .skill-level-percentage {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .skill-progress-bar {
-  background-color: #4d4d4d !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 body.dark-mode .skill-progress-fill {
@@ -213,18 +258,18 @@ body.dark-mode .skill-progress-fill {
 }
 
 body.dark-mode .skill-icon-wrapper {
-  background: linear-gradient(135deg, #4d4d4d 0%, #3d3d3d 100%) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
 }
 
 body.dark-mode .category-tab {
-  background-color: #3d3d3d !important;
-  border-color: #4d4d4d !important;
-  color: #e8e8e8 !important;
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
 body.dark-mode .category-tab:hover {
-  border-color: #5a9fd4 !important;
+  border-color: rgba(90, 159, 212, 0.5) !important;
   color: #5a9fd4 !important;
   box-shadow: 0 4px 12px rgba(90, 159, 212, 0.3) !important;
 }
@@ -237,18 +282,18 @@ body.dark-mode .category-tab.active {
 }
 
 body.dark-mode .category-title {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 /* Contact Form Dark Mode */
 body.dark-mode .contact-form .form-control {
-  background-color: #3d3d3d !important;
-  border-color: #4d4d4d !important;
-  color: #e8e8e8 !important;
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .contact-form .form-control::placeholder {
-  color: #b0b0b0 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .contact-form .asterisk-placeholder {
@@ -256,29 +301,29 @@ body.dark-mode .contact-form .asterisk-placeholder {
 }
 
 body.dark-mode .contact-form .form-control:focus {
-  background-color: #3d3d3d !important;
+  background-color: #1e293b !important;
   border-color: #5a9fd4 !important;
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .contact-add-head h3 {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .contact-add-head p {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .single-contact-add-info h3 {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .single-contact-add-info p {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .hm-foot-icon ul li > a {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .hm-foot-icon ul li > a:hover {
@@ -287,11 +332,11 @@ body.dark-mode .hm-foot-icon ul li > a:hover {
 
 /* Experience Section Dark Mode */
 body.dark-mode .experience .timeline-content .title {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .experience .experience-time h2 {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .experience .experience-time h3 {
@@ -338,7 +383,7 @@ body.dark-mode .experience .main-timeline .timeline-content {
 body.dark-mode .experience .main-timeline .description {
   background-color: transparent !important;
   background: transparent !important;
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
@@ -349,7 +394,7 @@ body.dark-mode .experience .main-timeline .description {
 body.dark-mode .experience .timeline-content p {
   background-color: transparent !important;
   background: transparent !important;
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
@@ -360,7 +405,7 @@ body.dark-mode .experience .timeline-content p {
 body.dark-mode .experience .timeline-content .description {
   background-color: transparent !important;
   background: transparent !important;
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
@@ -543,12 +588,12 @@ body.dark-mode .experience .main-timeline .timeline-content p {
 /* Remove text selection background */
 body.dark-mode .experience ::selection {
   background-color: rgba(90, 159, 212, 0.3) !important;
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .experience ::-moz-selection {
   background-color: rgba(90, 159, 212, 0.3) !important;
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 /* Remove all borders and outlines */
@@ -639,11 +684,11 @@ body.dark-mode .project-footer {
 }
 
 body.dark-mode .project-meta {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .project-stars {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .project-updated {
@@ -777,12 +822,12 @@ body.dark-mode .projects-grid div {
 
 /* LinkedIn Section Dark Mode */
 body.dark-mode .linkedin-text-content {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .linkedin-description {
   background-color: transparent !important;
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .linkedin-section p {
@@ -808,14 +853,14 @@ body.dark-mode .soft-skill-progress-bar {
 }
 
 body.dark-mode .soft-skill-percentage {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 /* Scroll to Top Dark Mode */
 body.dark-mode #scroll-Top .return-to-top {
-  background-color: #3d3d3d !important;
+  background-color: #1e293b !important;
   border-color: #5a9fd4 !important;
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode #scroll-Top .return-to-top:hover {
@@ -825,7 +870,7 @@ body.dark-mode #scroll-Top .return-to-top:hover {
 
 /* Hero Section Dark Mode */
 body.dark-mode #welcome-hero {
-  background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%) !important;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
   position: relative;
 }
 
@@ -836,8 +881,8 @@ body.dark-mode #welcome-hero::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(90, 159, 212, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 70% 50%, rgba(74, 143, 196, 0.08) 0%, transparent 50%);
+  background: radial-gradient(circle at 30% 50%, rgba(90, 159, 212, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(74, 143, 196, 0.06) 0%, transparent 50%);
   pointer-events: none;
   z-index: 1;
 }
@@ -853,12 +898,12 @@ body.dark-mode .header-text .hero-title {
 }
 
 body.dark-mode .header-text .hero-greeting {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.dark-mode .header-text .hero-comma {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -897,7 +942,7 @@ body.dark-mode .header-text .hero-dot {
 }
 
 body.dark-mode .header-text .hero-status {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -982,34 +1027,34 @@ body.dark-mode .header-text .hero-status {
 }
 
 body.dark-mode .header-text .hero-status:hover {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
   text-shadow: 0 2px 15px rgba(90, 159, 212, 0.3) !important;
 }
 
 /* Profile Section Dark Mode */
 body.dark-mode .about {
-  background-color: #333333 !important;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
 }
 
 body.dark-mode .single-about-txt h3 {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .single-about-txt p {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
   border-bottom-color: #4d4d4d !important;
 }
 
 body.dark-mode .single-about-add-info h3 {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .single-about-add-info p {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .about-list-icon ul li a {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .about-list-icon ul li a:hover {
@@ -1017,7 +1062,7 @@ body.dark-mode .about-list-icon ul li a:hover {
 }
 
 body.dark-mode .about-list-icon ul li a i {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .about-list-icon ul li a:hover i {
@@ -1040,7 +1085,7 @@ body.dark-mode .projects-footer {
 
 body.dark-mode .projects-loading,
 body.dark-mode .projects-error {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 /* Additional Dark Mode Improvements */
@@ -1060,12 +1105,12 @@ body.dark-mode .single-timeline-box {
 }
 
 body.dark-mode .experience .timeline {
-  background-color: #3d3d3d !important;
+  background-color: #1e293b !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.dark-mode .main-timeline:before {
-  background: #4d4d4d !important;
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
 body.dark-mode .timeline-content span > i,
@@ -1074,15 +1119,15 @@ body.dark-mode .experience-time span > i {
 }
 
 body.dark-mode .timeline-content h4.title {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .main-timeline .description {
-  color: #c8c8c8 !important;
+  color: #94a3b8 !important;
 }
 
 body.dark-mode .experience {
-  border-top-color: #4d4d4d !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Stats section background overlay */
@@ -1092,12 +1137,12 @@ body.dark-mode .stats-section::before {
 
 /* Soft skills section border */
 body.dark-mode .soft-skills-section::before {
-  background: linear-gradient(90deg, transparent, #4d4d4d, transparent) !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent) !important;
 }
 
 /* Skills section background */
 body.dark-mode .skills-professional::before {
-  background: linear-gradient(90deg, transparent, #4d4d4d, transparent) !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent) !important;
 }
 
 /* Skills category grid */
@@ -1156,11 +1201,21 @@ body.dark-mode .skills-category-tabs {
 
 /* Tab icon and title */
 body.dark-mode .tab-icon {
-  color: inherit !important;
+  color: #e2e8f0 !important;
 }
 
 body.dark-mode .tab-title {
-  color: inherit !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .category-tab.active .tab-icon,
+body.dark-mode .category-tab.active .tab-title {
+  color: white !important;
+}
+
+body.dark-mode .category-tab:hover .tab-icon,
+body.dark-mode .category-tab:hover .tab-title {
+  color: #5a9fd4 !important;
 }
 
 /* Category icon in header */
@@ -1181,7 +1236,7 @@ body.dark-mode .skill-card:hover .skill-icon {
 
 /* Skills professional section background gradient */
 body.dark-mode .skills-professional {
-  background: linear-gradient(135deg, #333333 0%, #2d2d2d 100%) !important;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
 }
 
 /* LinkedIn section adjustments */
@@ -1221,7 +1276,7 @@ body.dark-mode .about-list-icon {
 
 /* Section headings */
 body.dark-mode .section-heading {
-  color: #e8e8e8 !important;
+  color: #e2e8f0 !important;
 }
 
 /* Links and anchors */

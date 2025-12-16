@@ -5,6 +5,11 @@
   position: relative;
 }
 
+/* Espace avant le titre Compétences */
+.skills .section-heading {
+  padding-top: 40px;
+}
+
 .skills-professional::before {
   content: '';
   position: absolute;
@@ -327,5 +332,111 @@
   .skill-icon-wrapper {
     margin: 0 auto;
   }
+}
+
+/* Dark Mode */
+body.dark-mode .skills-professional {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .skills-professional::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+body.dark-mode .category-tab {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+body.dark-mode .category-tab:hover {
+  border-color: rgba(90, 159, 212, 0.5);
+  color: #5a9fd4;
+  box-shadow: 0 4px 12px rgba(90, 159, 212, 0.3);
+}
+
+body.dark-mode .category-tab.active {
+  background: linear-gradient(135deg, #5a9fd4 0%, #4a8fc4 100%);
+  border-color: #5a9fd4;
+  color: white;
+}
+
+body.dark-mode .category-title {
+  color: #e2e8f0;
+}
+
+body.dark-mode .skill-card {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .skill-card:hover {
+  border-color: rgba(90, 159, 212, 0.5);
+  box-shadow: 0 12px 40px rgba(90, 159, 212, 0.25);
+}
+
+body.dark-mode .skill-icon-wrapper {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+body.dark-mode .skill-name {
+  color: #e2e8f0;
+}
+
+body.dark-mode .skill-years {
+  color: #94a3b8;
+}
+
+body.dark-mode .skill-level-label {
+  color: #94a3b8;
+}
+
+body.dark-mode .skill-level-percentage {
+  color: #e2e8f0;
+}
+
+body.dark-mode .skill-progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .tab-icon {
+  color: #e2e8f0;
+}
+
+body.dark-mode .tab-title {
+  color: #e2e8f0;
+}
+
+body.dark-mode .category-tab.active .tab-icon,
+body.dark-mode .category-tab.active .tab-title {
+  color: white;
+}
+
+body.dark-mode .category-icon {
+  color: #e2e8f0;
+}
+
+body.dark-mode .skills-category-tabs {
+  background-color: transparent;
+}
+
+body.dark-mode .skills-grid {
+  background-color: transparent;
+}
+
+body.dark-mode .skill-card-header {
+  background-color: transparent;
+}
+
+body.dark-mode .skill-header-info {
+  background-color: transparent;
+}
+
+body.dark-mode .skill-card-body {
+  background-color: transparent;
+}
+
+body.dark-mode .skill-level-info {
+  background-color: transparent;
 }
 
