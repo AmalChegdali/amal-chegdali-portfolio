@@ -1,0 +1,1270 @@
+/* Dark Mode Styles */
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #427fc4 0%, #3681bd 100%);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(66, 127, 196, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 6px 20px rgba(66, 127, 196, 0.6);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+  background-color: #2d2d2d;
+  color: #e8e8e8;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* General paragraph styles in dark mode */
+body.dark-mode p {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode div p {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .soft-skills-section,
+body.dark-mode .skills,
+body.dark-mode .education,
+body.dark-mode .experience,
+body.dark-mode .portfolio,
+body.dark-mode .stats-section {
+  background-color: #333333 !important;
+}
+
+body.dark-mode .soft-skill-card,
+body.dark-mode .project-card,
+body.dark-mode .linkedin-card {
+  background-color: #3d3d3d !important;
+  border-color: #4d4d4d !important;
+  color: #e8e8e8 !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .soft-skill-card:hover,
+body.dark-mode .project-card:hover,
+body.dark-mode .linkedin-card:hover {
+  box-shadow: 0 15px 40px rgba(90, 159, 212, 0.2) !important;
+  border-color: #5a9fd4 !important;
+}
+
+body.dark-mode .soft-skill-name,
+body.dark-mode .project-title,
+body.dark-mode .linkedin-title {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .soft-skill-progress-bar,
+body.dark-mode .project-description,
+body.dark-mode .linkedin-description {
+  background-color: #4d4d4d !important;
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .section-subtitle,
+body.dark-mode .project-description,
+body.dark-mode .timeline-content .description {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .gradient-text {
+  background: linear-gradient(135deg, #5a9fd4 0%, #4a8fc4 50%, #7ab3e4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark-mode nav.navbar.bootsnav {
+  background-color: #3d3d3d !important;
+  border-bottom-color: #4d4d4d !important;
+}
+
+body.dark-mode .navbar-nav a {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .navbar-nav a:hover {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode footer.footer-copyright {
+  background-color: #2d2d2d !important;
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .contact {
+  background-color: #333333 !important;
+}
+
+/* Education Section Dark Mode */
+body.dark-mode .education .timeline {
+  background-color: #3d3d3d !important;
+  border-color: #4d4d4d !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .education .timeline:hover {
+  box-shadow: 0 10px 30px rgba(90, 159, 212, 0.2) !important;
+}
+
+body.dark-mode .education .timeline-content .title {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .education .timeline-content h5 {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .single-horizontal-timeline .experience-time h2 {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .single-horizontal-timeline .experience-time h3 {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .timeline-horizontal-border i {
+  border-color: #3d3d3d !important;
+}
+
+/* Stats Section Dark Mode */
+body.dark-mode .stat-card {
+  background-color: #3d3d3d !important;
+  border-color: #4d4d4d !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .stat-card:hover {
+  box-shadow: 0 15px 40px rgba(90, 159, 212, 0.25) !important;
+}
+
+body.dark-mode .stat-label {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .stat-icon {
+  color: #5a9fd4 !important;
+}
+
+/* Skills Section Dark Mode */
+body.dark-mode .skill-card {
+  background-color: #3d3d3d !important;
+  border-color: #4d4d4d !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .skill-card:hover {
+  box-shadow: 0 12px 40px rgba(90, 159, 212, 0.25) !important;
+  border-color: #5a9fd4 !important;
+}
+
+body.dark-mode .skill-card::before {
+  background: linear-gradient(180deg, #5a9fd4 0%, #4a8fc4 100%) !important;
+}
+
+body.dark-mode .skill-card:hover::before {
+  background: linear-gradient(180deg, #5a9fd4 0%, #4a8fc4 100%) !important;
+  opacity: 0.1 !important;
+}
+
+body.dark-mode .skill-name {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .skill-years {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .skill-level-label {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .skill-level-percentage {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .skill-progress-bar {
+  background-color: #4d4d4d !important;
+}
+
+body.dark-mode .skill-progress-fill {
+  box-shadow: 0 2px 8px rgba(90, 159, 212, 0.3) !important;
+}
+
+body.dark-mode .skill-icon-wrapper {
+  background: linear-gradient(135deg, #4d4d4d 0%, #3d3d3d 100%) !important;
+}
+
+body.dark-mode .category-tab {
+  background-color: #3d3d3d !important;
+  border-color: #4d4d4d !important;
+  color: #e8e8e8 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-mode .category-tab:hover {
+  border-color: #5a9fd4 !important;
+  color: #5a9fd4 !important;
+  box-shadow: 0 4px 12px rgba(90, 159, 212, 0.3) !important;
+}
+
+body.dark-mode .category-tab.active {
+  background: linear-gradient(135deg, #5a9fd4 0%, #4a8fc4 100%) !important;
+  border-color: #5a9fd4 !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(90, 159, 212, 0.4) !important;
+}
+
+body.dark-mode .category-title {
+  color: #e8e8e8 !important;
+}
+
+/* Contact Form Dark Mode */
+body.dark-mode .contact-form .form-control {
+  background-color: #3d3d3d !important;
+  border-color: #4d4d4d !important;
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .contact-form .form-control::placeholder {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .contact-form .asterisk-placeholder {
+  color: #e74c3c !important;
+}
+
+body.dark-mode .contact-form .form-control:focus {
+  background-color: #3d3d3d !important;
+  border-color: #5a9fd4 !important;
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .contact-add-head h3 {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .contact-add-head p {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .single-contact-add-info h3 {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .single-contact-add-info p {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .hm-foot-icon ul li > a {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .hm-foot-icon ul li > a:hover {
+  color: #5a9fd4 !important;
+}
+
+/* Experience Section Dark Mode */
+body.dark-mode .experience .timeline-content .title {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .experience .experience-time h2 {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .experience .experience-time h3 {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .experience .timeline-content h5 {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .experience-time h3 {
+  color: #5a9fd4 !important;
+}
+
+/* Experience timeline boxes and divs */
+body.dark-mode .experience .single-timeline-box {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .timeline {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .timeline-content {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .experience-time {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .main-timeline {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .main-timeline .timeline {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .main-timeline .timeline-content {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .main-timeline .description {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #c8c8c8 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.dark-mode .experience .timeline-content p {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #c8c8c8 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.dark-mode .experience .timeline-content .description {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #c8c8c8 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove all borders from timeline content paragraphs */
+body.dark-mode .experience .timeline-content p.description {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.dark-mode .experience .timeline-content h4.title {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+body.dark-mode .experience .timeline-content h5 {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Remove any background from timeline content wrapper */
+body.dark-mode .experience .timeline-content {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+body.dark-mode .experience .main-timeline .timeline-content {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Fix for timeline-single-before border in dark mode */
+body.dark-mode .timeline-single-before:before {
+  border-left-color: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove background from timeline-single-before element itself */
+body.dark-mode .timeline-single-before {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove background from timeline-content.right */
+body.dark-mode .main-timeline .timeline-content.right {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience div {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .row {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .col-md-5,
+body.dark-mode .experience .col-md-offset-1 {
+  background-color: transparent !important;
+}
+
+/* Remove hover effects that create selection-like backgrounds */
+body.dark-mode .experience .single-timeline-box:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .timeline:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .timeline-content:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .experience-time:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .main-timeline:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .main-timeline .timeline:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .main-timeline .timeline-content:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience div:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience p:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .description:hover {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .experience .timeline-content p:hover {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .experience .timeline-content .description:hover {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any padding or margin that might create visual borders */
+body.dark-mode .experience .main-timeline .description {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.dark-mode .experience .timeline-content p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Force remove any background from all text elements in experience */
+body.dark-mode .experience p,
+body.dark-mode .experience .description,
+body.dark-mode .experience .main-timeline .description,
+body.dark-mode .experience .timeline-content p,
+body.dark-mode .experience .timeline-content .description {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Remove background from timeline content wrapper and all children */
+body.dark-mode .experience .main-timeline .timeline-content * {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+body.dark-mode .experience .timeline-content * {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Specifically target the description paragraphs */
+body.dark-mode .experience .main-timeline .timeline-content .description,
+body.dark-mode .experience .main-timeline .timeline-content p.description,
+body.dark-mode .experience .main-timeline .timeline-content p {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+/* Remove text selection background */
+body.dark-mode .experience ::selection {
+  background-color: rgba(90, 159, 212, 0.3) !important;
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .experience ::-moz-selection {
+  background-color: rgba(90, 159, 212, 0.3) !important;
+  color: #e8e8e8 !important;
+}
+
+/* Remove all borders and outlines */
+body.dark-mode .experience .single-timeline-box {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .timeline {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .timeline-content {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .experience-time {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .main-timeline {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .main-timeline .timeline {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .main-timeline .timeline-content {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience div {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience p {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .description {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .row {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .experience .col-md-5,
+body.dark-mode .experience .col-md-offset-1 {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Remove focus outlines */
+body.dark-mode .experience *:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any box-shadow that might create a border effect */
+body.dark-mode .experience .single-timeline-box {
+  box-shadow: none !important;
+}
+
+body.dark-mode .experience .timeline {
+  box-shadow: none !important;
+}
+
+body.dark-mode .experience .timeline-content {
+  box-shadow: none !important;
+}
+
+/* Project Cards Dark Mode */
+body.dark-mode .project-footer {
+  border-top-color: #4d4d4d !important;
+}
+
+body.dark-mode .project-meta {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .project-stars {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .project-updated {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .project-link {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .project-link:hover {
+  color: #7ab3e4 !important;
+}
+
+body.dark-mode .project-topic {
+  background-color: #4d4d4d !important;
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .project-topics {
+  border-top-color: #4d4d4d !important;
+}
+
+/* Remove borders and outlines from Portfolio/Project section */
+body.dark-mode .portfolio {
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .portfolio div {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio p {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio .project-card {
+  border: 1px solid #4d4d4d !important;
+}
+
+body.dark-mode .portfolio .project-card:hover {
+  border-color: #5a9fd4 !important;
+}
+
+body.dark-mode .portfolio .project-description {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio .project-description:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio .project-title {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio .project-title:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio .project-meta {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio .project-meta:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio .project-footer {
+  border-top: 1px solid #4d4d4d !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .portfolio .project-topics {
+  border-top: 1px solid #4d4d4d !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .portfolio *:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .portfolio .project-card p:hover {
+  background-color: transparent !important;
+}
+
+body.dark-mode .portfolio .project-description:hover {
+  background-color: transparent !important;
+}
+
+/* GitHub Projects container */
+body.dark-mode .github-projects-container {
+  background-color: transparent !important;
+}
+
+body.dark-mode .github-projects-container div {
+  background-color: transparent !important;
+}
+
+body.dark-mode .github-projects-container p {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+}
+
+body.dark-mode .projects-grid {
+  background-color: transparent !important;
+}
+
+body.dark-mode .projects-grid div {
+  background-color: transparent !important;
+}
+
+/* LinkedIn Section Dark Mode */
+body.dark-mode .linkedin-text-content {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .linkedin-description {
+  background-color: transparent !important;
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .linkedin-section p {
+  background-color: transparent !important;
+}
+
+body.dark-mode .linkedin-section .linkedin-description {
+  background-color: transparent !important;
+}
+
+body.dark-mode .linkedin-stat-item {
+  background-color: #4d4d4d !important;
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .linkedin-stat-item:hover {
+  background-color: #5a5a5a !important;
+}
+
+/* Soft Skills Dark Mode */
+body.dark-mode .soft-skill-progress-bar {
+  background-color: #4d4d4d !important;
+}
+
+body.dark-mode .soft-skill-percentage {
+  color: #e8e8e8 !important;
+}
+
+/* Scroll to Top Dark Mode */
+body.dark-mode #scroll-Top .return-to-top {
+  background-color: #3d3d3d !important;
+  border-color: #5a9fd4 !important;
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode #scroll-Top .return-to-top:hover {
+  background-color: #5a9fd4 !important;
+  color: white !important;
+}
+
+/* Hero Section Dark Mode */
+body.dark-mode #welcome-hero {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%) !important;
+  position: relative;
+}
+
+body.dark-mode #welcome-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(90, 159, 212, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(74, 143, 196, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+body.dark-mode .header-text {
+  position: relative;
+  z-index: 2;
+}
+
+body.dark-mode .header-text .hero-title {
+  color: #7ab3e4 !important;
+  text-shadow: 0 4px 20px rgba(90, 159, 212, 0.3) !important;
+}
+
+body.dark-mode .header-text .hero-greeting {
+  color: #e8e8e8 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .header-text .hero-comma {
+  color: #e8e8e8 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .header-text .hero-i-am {
+  color: #7ab3e4 !important;
+  text-shadow: 0 2px 10px rgba(90, 159, 212, 0.3) !important;
+}
+
+body.dark-mode .header-text .hero-name {
+  color: #ffffff !important;
+  text-shadow: 0 4px 15px rgba(90, 159, 212, 0.4), 0 0 30px rgba(90, 159, 212, 0.2) !important;
+  font-weight: 800 !important;
+}
+
+body.dark-mode .header-text .hero-surname {
+  color: #ffffff !important;
+  text-shadow: 0 4px 15px rgba(90, 159, 212, 0.4), 0 0 30px rgba(90, 159, 212, 0.2) !important;
+  font-weight: 800 !important;
+}
+
+body.dark-mode .header-text .hero-dot {
+  color: #5a9fd4 !important;
+  text-shadow: 0 0 10px rgba(90, 159, 212, 0.5) !important;
+  animation: pulseDot 2s ease-in-out infinite !important;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+body.dark-mode .header-text .hero-status {
+  color: #c8c8c8 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .header-text h2 span {
+  color: #5a9fd4 !important;
+}
+
+/* Hero animations in dark mode */
+body.dark-mode .animate-text,
+body.dark-mode .animate-text-delay-1,
+body.dark-mode .animate-text-delay-2,
+body.dark-mode .animate-text-delay-3 {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+body.dark-mode .animate-fade-in {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+body.dark-mode .animate-button {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Hero container adjustments */
+body.dark-mode #welcome-hero > div {
+  background: transparent !important;
+}
+
+body.dark-mode #welcome-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fade-in animation for hero text */
+body.dark-mode .fade-in {
+  animation: fadeInDark 1s ease-out !important;
+}
+
+@keyframes fadeInDark {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced button text and icon */
+body.dark-mode .enhanced-button span {
+  color: white !important;
+}
+
+body.dark-mode .enhanced-button i {
+  color: white !important;
+}
+
+/* Particles canvas styling */
+body.dark-mode #particles {
+  background: transparent !important;
+}
+
+body.dark-mode #particles canvas {
+  background: transparent !important;
+}
+
+/* Additional hero text glow effects */
+body.dark-mode .header-text .hero-name,
+body.dark-mode .header-text .hero-surname {
+  transition: text-shadow 0.3s ease !important;
+}
+
+body.dark-mode .header-text .hero-name:hover,
+body.dark-mode .header-text .hero-surname:hover {
+  text-shadow: 0 4px 20px rgba(90, 159, 212, 0.5), 0 0 40px rgba(90, 159, 212, 0.3) !important;
+}
+
+/* Hero status animation enhancement */
+body.dark-mode .header-text .hero-status {
+  transition: color 0.3s ease, text-shadow 0.3s ease !important;
+}
+
+body.dark-mode .header-text .hero-status:hover {
+  color: #e8e8e8 !important;
+  text-shadow: 0 2px 15px rgba(90, 159, 212, 0.3) !important;
+}
+
+/* Profile Section Dark Mode */
+body.dark-mode .about {
+  background-color: #333333 !important;
+}
+
+body.dark-mode .single-about-txt h3 {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .single-about-txt p {
+  color: #c8c8c8 !important;
+  border-bottom-color: #4d4d4d !important;
+}
+
+body.dark-mode .single-about-add-info h3 {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .single-about-add-info p {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .about-list-icon ul li a {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .about-list-icon ul li a:hover {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .about-list-icon ul li a i {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .about-list-icon ul li a:hover i {
+  color: #5a9fd4 !important;
+}
+
+/* View All Projects Button Dark Mode */
+body.dark-mode .view-all-projects-btn {
+  background: linear-gradient(135deg, #5a9fd4 0%, #4a8fc4 100%) !important;
+  box-shadow: 0 5px 15px rgba(90, 159, 212, 0.3) !important;
+}
+
+body.dark-mode .view-all-projects-btn:hover {
+  box-shadow: 0 8px 25px rgba(90, 159, 212, 0.5) !important;
+}
+
+body.dark-mode .projects-footer {
+  border-top-color: #4d4d4d !important;
+}
+
+body.dark-mode .projects-loading,
+body.dark-mode .projects-error {
+  color: #c8c8c8 !important;
+}
+
+/* Additional Dark Mode Improvements */
+
+/* Timeline elements */
+body.dark-mode .timeline-horizontal-border i {
+  box-shadow: 0 0 0 2px #5a9fd4 !important;
+}
+
+body.dark-mode .single-timeline-horizontal {
+  background: linear-gradient(90deg, #5a9fd4 0%, #7ab3e4 100%) !important;
+}
+
+/* Experience timeline boxes */
+body.dark-mode .single-timeline-box {
+  background-color: transparent !important;
+}
+
+body.dark-mode .experience .timeline {
+  background-color: #3d3d3d !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .main-timeline:before {
+  background: #4d4d4d !important;
+}
+
+body.dark-mode .timeline-content span > i,
+body.dark-mode .experience-time span > i {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .timeline-content h4.title {
+  color: #e8e8e8 !important;
+}
+
+body.dark-mode .main-timeline .description {
+  color: #c8c8c8 !important;
+}
+
+body.dark-mode .experience {
+  border-top-color: #4d4d4d !important;
+}
+
+/* Stats section background overlay */
+body.dark-mode .stats-section::before {
+  background: linear-gradient(135deg, rgba(90, 159, 212, 0.05) 0%, rgba(74, 143, 196, 0.05) 50%, rgba(122, 179, 228, 0.05) 100%) !important;
+}
+
+/* Soft skills section border */
+body.dark-mode .soft-skills-section::before {
+  background: linear-gradient(90deg, transparent, #4d4d4d, transparent) !important;
+}
+
+/* Skills section background */
+body.dark-mode .skills-professional::before {
+  background: linear-gradient(90deg, transparent, #4d4d4d, transparent) !important;
+}
+
+/* Skills category grid */
+body.dark-mode .skills-category-grid {
+  background-color: transparent !important;
+}
+
+/* Skills grid container */
+body.dark-mode .skills-grid-container {
+  background-color: transparent !important;
+}
+
+/* Category header */
+body.dark-mode .category-header {
+  background-color: transparent !important;
+}
+
+/* Skill card header */
+body.dark-mode .skill-card-header {
+  background-color: transparent !important;
+}
+
+body.dark-mode .skill-header-info {
+  background-color: transparent !important;
+}
+
+/* Skill card body */
+body.dark-mode .skill-card-body {
+  background-color: transparent !important;
+}
+
+/* Skill level info */
+body.dark-mode .skill-level-info {
+  background-color: transparent !important;
+}
+
+/* Project card hover effects */
+body.dark-mode .project-card::before {
+  background: linear-gradient(90deg, transparent, rgba(90, 159, 212, 0.1), transparent) !important;
+}
+
+/* Stat card shimmer effect */
+body.dark-mode .stat-card::before {
+  background: linear-gradient(90deg, transparent, rgba(90, 159, 212, 0.2), transparent) !important;
+}
+
+/* Skill progress fill shimmer */
+body.dark-mode .skill-progress-fill::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+}
+
+/* Skills category tabs container */
+body.dark-mode .skills-category-tabs {
+  background-color: transparent !important;
+}
+
+/* Tab icon and title */
+body.dark-mode .tab-icon {
+  color: inherit !important;
+}
+
+body.dark-mode .tab-title {
+  color: inherit !important;
+}
+
+/* Category icon in header */
+body.dark-mode .category-icon {
+  color: #5a9fd4 !important;
+}
+
+/* Skill icon images - ensure they're visible */
+body.dark-mode .skill-icon {
+  filter: brightness(1.1) contrast(1.1) !important;
+  opacity: 0.95 !important;
+}
+
+body.dark-mode .skill-card:hover .skill-icon {
+  filter: brightness(1.2) contrast(1.2) !important;
+  opacity: 1 !important;
+}
+
+/* Skills professional section background gradient */
+body.dark-mode .skills-professional {
+  background: linear-gradient(135deg, #333333 0%, #2d2d2d 100%) !important;
+}
+
+/* LinkedIn section adjustments */
+body.dark-mode .linkedin-section {
+  background: linear-gradient(135deg, #005885 0%, #003d5c 100%) !important;
+}
+
+body.dark-mode .linkedin-card {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode .linkedin-card:hover {
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Contact button dark mode */
+body.dark-mode .contact-btn {
+  background: linear-gradient(135deg, #5a9fd4 0%, #4a8fc4 100%) !important;
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode .contact-btn:hover {
+  background: #7ab3e4 !important;
+  border-color: #7ab3e4 !important;
+  box-shadow: 2px 2px 9px rgba(90, 159, 212, 0.6) !important;
+  color: white !important;
+}
+
+/* Profile image overlay */
+body.dark-mode .single-about-img:before {
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .about-list-icon {
+  background: #3d3d3d !important;
+}
+
+/* Section headings */
+body.dark-mode .section-heading {
+  color: #e8e8e8 !important;
+}
+
+/* Links and anchors */
+body.dark-mode a {
+  transition: color 0.3s ease !important;
+}
+
+body.dark-mode .hm-footer-copyright p a {
+  color: #5a9fd4 !important;
+}
+
+body.dark-mode .hm-footer-copyright p a:hover {
+  color: #7ab3e4 !important;
+}
+
+/* Input focus states */
+body.dark-mode .contact-form .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(90, 159, 212, 0.2) !important;
+}
+
+/* Project language badge */
+body.dark-mode .project-language {
+  background: linear-gradient(135deg, #5a9fd4 0%, #4a8fc4 100%) !important;
+}
+
+/* Soft skill icon wrapper */
+body.dark-mode .soft-skill-icon-wrapper {
+  background: linear-gradient(135deg, #4d4d4d 0%, #3d3d3d 100%) !important;
+}
+
+/* LinkedIn QR placeholder */
+body.dark-mode .linkedin-qr-placeholder {
+  background: linear-gradient(135deg, #005885 0%, #003d5c 100%) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
