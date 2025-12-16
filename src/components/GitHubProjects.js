@@ -38,7 +38,9 @@ const FALLBACK_PROJECTS = [
 
 const GitHubProjects = () => {
   const [projects, setProjects] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedFilter, setSelectedFilter] = useState('all');
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -61,46 +63,38 @@ const GitHubProjects = () => {
 
         const data = await response.json();
         
-        // Filtrer et formater les projets
-        // Exclure les projets indésirables
-        const excludedProjects = ['Portfolio', 'MyPortfolio-main', 'AmalChegdali', 'Docker-Jenkins'];
-        const preferredProjects = ['ekramMobile', 'ekram', 'Power-BI', 'power-bi', 'PowerBI', 'powerbi'];
+        // Exclure le portfolio et autres projets indésirables
+        const excludedProjects = [
+          'Portfolio', 
+          'MyPortfolio-main', 
+          'amal-chegdali-portfolio',
+          'AmalChegdali', 
+          'Docker-Jenkins'
+        ];
         
-        // Filtrer les projets
-        let filteredProjects = data.filter(repo => 
-          !repo.fork && !excludedProjects.includes(repo.name)
-        );
+        // Filtrer les projets (exclure les forks et le portfolio)
+        let filteredProjects = data
+          .filter(repo => 
+            !repo.fork && 
+            !excludedProjects.some(excluded => 
+              repo.name.toLowerCase().includes(excluded.toLowerCase())
+            )
+          )
+          // Trier par date de mise à jour (les plus récents en premier)
+          .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+          // Prendre les 3 derniers projets
+          .slice(0, 3);
         
-        // Séparer les projets préférés des autres
-        const preferred = filteredProjects.filter(repo => 
-          preferredProjects.some(pref => repo.name.toLowerCase().includes(pref.toLowerCase()))
-        );
-        
-        const others = filteredProjects.filter(repo => 
-          !preferredProjects.some(pref => repo.name.toLowerCase().includes(pref.toLowerCase()))
-        );
-        
-        // Trier les projets préférés par date de mise à jour
-        preferred.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-        
-        // Trier les autres projets par date de mise à jour
-        others.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-        
-        // Combiner : projets préférés en premier, puis les autres
-        const sortedProjects = [...preferred, ...others];
-        
-        const formattedProjects = sortedProjects
-          .slice(0, 3) // Limiter à 3 projets
-          .map(repo => ({
-            id: repo.id,
-            name: repo.name,
-            description: repo.description || 'Aucune description disponible',
-            url: repo.html_url,
-            language: repo.language || 'Autre',
-            stars: repo.stargazers_count,
-            updated: new Date(repo.updated_at).toLocaleDateString('fr-FR'),
-            topics: repo.topics || []
-          }));
+        const formattedProjects = filteredProjects.map(repo => ({
+          id: repo.id,
+          name: repo.name,
+          description: repo.description || 'Aucune description disponible',
+          url: repo.html_url,
+          language: repo.language || 'Autre',
+          stars: repo.stargazers_count,
+          updated: new Date(repo.updated_at).toLocaleDateString('fr-FR'),
+          topics: repo.topics || []
+        }));
         
         if (formattedProjects.length === 0) {
           // Si aucun projet trouvé, utiliser les projets statiques (limiter à 3)
@@ -119,6 +113,32 @@ const GitHubProjects = () => {
 
     fetchProjects();
   }, []);
+
+  // Filtrer les projets selon le filtre sélectionné
+  useEffect(() => {
+    if (selectedFilter === 'all') {
+      setFilteredProjects(projects);
+    } else {
+      setFilteredProjects(
+        projects.filter(project => 
+          project.language?.toLowerCase() === selectedFilter.toLowerCase() ||
+          project.topics?.some(topic => topic.toLowerCase().includes(selectedFilter.toLowerCase()))
+        )
+      );
+    }
+  }, [projects, selectedFilter]);
+
+  // Obtenir les langages uniques pour les filtres (exclure les langages communs)
+  const excludedLanguages = [
+    'Autre', 'Dart', 'JavaScript', 'PHP', 'HTML',
+    'autre', 'dart', 'javascript', 'php', 'html'
+  ];
+  const languages = new Set(
+    projects
+      .map(p => p.language)
+      .filter(Boolean)
+      .filter(lang => !excludedLanguages.includes(lang))
+  );
 
   if (loading) {
     return (
@@ -148,8 +168,24 @@ const GitHubProjects = () => {
 
   return (
     <div className="github-projects-container">
+      {/* Filtres */}
+      {Array.from(languages).length > 0 && (
+        <div className="projects-filters">
+          {Array.from(languages).map((lang) => (
+            <button
+              key={lang}
+              className={`filter-btn ${selectedFilter === lang ? 'active' : ''}`}
+              onClick={() => setSelectedFilter(lang)}
+            >
+              {lang}
+            </button>
+          ))}
+        </div>
+      )}
+      
       <div className="projects-grid">
-        {projects.map((project) => (
+        {filteredProjects.length > 0 ? (
+          filteredProjects.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-header">
               <h3 className="project-title">{project.name}</h3>
@@ -182,7 +218,12 @@ const GitHubProjects = () => {
               </div>
             )}
           </div>
-        ))}
+          ))
+        ) : (
+          <div className="no-projects">
+            <p>Aucun projet trouvé pour ce filtre.</p>
+          </div>
+        )}
       </div>
       <div className="projects-footer">
         <a

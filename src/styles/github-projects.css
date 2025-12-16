@@ -3,6 +3,50 @@
   padding: 40px 0;
 }
 
+/* Filtres */
+.projects-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 20px 0;
+}
+
+.filter-btn {
+  background: white;
+  border: 2px solid #e8ecf1;
+  color: #5a6c7d;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn:hover {
+  border-color: #427fc4;
+  color: #427fc4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(66, 127, 196, 0.2);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #427fc4 0%, #3681bd 100%);
+  color: white;
+  border-color: #427fc4;
+  box-shadow: 0 4px 15px rgba(66, 127, 196, 0.3);
+}
+
+.no-projects {
+  text-align: center;
+  padding: 60px 20px;
+  color: #5a6c7d;
+  grid-column: 1 / -1;
+}
+
 .projects-loading,
 .projects-error {
   text-align: center;

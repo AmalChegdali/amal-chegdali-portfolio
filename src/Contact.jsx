@@ -1,7 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 import { useTranslation } from 'react-i18next';  
+
+// Configuration EmailJS
+// IMPORTANT: Remplacez ces valeurs par vos propres identifiants depuis EmailJS
+const EMAILJS_CONFIG = {
+  SERVICE_ID: 'service_xaxq1nw',        // Service ID EmailJS
+  TEMPLATE_ID: 'template_icytr1n',     // Template ID EmailJS (My Default Template)
+  PUBLIC_KEY: 'RG4jT9v3ayVpKJ8PE'       // Public Key EmailJS
+};
 
 export const ContactUs = () => {
   const form = useRef();
@@ -9,6 +17,11 @@ export const ContactUs = () => {
   
   // Nouvel état pour gérer le chargement
   const [isLoading, setIsLoading] = useState(false);
+
+  // Initialiser EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -57,8 +70,8 @@ export const ContactUs = () => {
     setIsLoading(true);
 
     emailjs
-      .sendForm('service_xaxq1nw', 'template_icytr1n', form.current, {
-        publicKey: 'RG4jT9v3ayVpKJ8PE',
+      .sendForm(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, form.current, {
+        publicKey: EMAILJS_CONFIG.PUBLIC_KEY,
       })
       .then(
         (result) => {
@@ -89,11 +102,27 @@ export const ContactUs = () => {
         (error) => {
           // Si une erreur se produit
           setIsLoading(false); // Arrêter le chargement en cas d'erreur
-          console.log('FAILED...', error.text);
+          console.error('EmailJS Error Details:', {
+            error: error,
+            text: error.text,
+            status: error.status,
+            config: EMAILJS_CONFIG
+          });
+          
+          // Message d'erreur plus détaillé
+          let errorMessage = t("Une erreur est survenue, veuillez réessayer");
+          if (error.text) {
+            errorMessage = error.text;
+          } else if (error.status === 404) {
+            errorMessage = "Template ID non trouvé. Vérifiez votre configuration EmailJS.";
+          }
+          
           Swal.fire({
-            title: "Error",
-            text: "Une erreur est survenue, veuillez réessayer",
-            icon: "error"
+            title: t("Erreur"),
+            text: errorMessage,
+            icon: "error",
+            confirmButtonColor: '#427fc4',
+            footer: `Template ID utilisé: ${EMAILJS_CONFIG.TEMPLATE_ID}`
           });
         }
       );
@@ -161,16 +190,18 @@ export const ContactUs = () => {
             <input
               className="contact-btn"
               type="submit"
-              value={t("Envoyer")}
+              value={isLoading ? t("Envoi...") : t("Envoyer")}
+              disabled={isLoading}
               style={{
-                backgroundColor: '#427fc4',
+                backgroundColor: isLoading ? '#9e9e9e' : '#427fc4',
                 color: 'white',
                 border: 'none',
                 padding: '10px 20px',
-                cursor: 'pointer',
+                cursor: isLoading ? 'not-allowed' : 'pointer',
                 width: '100%',
                 height: '50px',
                 boxShadow: '0 5px 20px rgba(0,0,0,.2)',
+                opacity: isLoading ? 0.7 : 1,
               }}
             />
           </div>

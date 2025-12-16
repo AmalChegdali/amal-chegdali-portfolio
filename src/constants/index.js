@@ -13,7 +13,7 @@ export const SOCIAL_LINKS = {
 
 export const CONTACT_INFO = {
   phone: '+212-625-081-064',
-  email: 'a.chegdali@gmail.com',
+  email: 'a.chegdali01@gmail.com',
 };
 
 export const SECTION_IDS = {

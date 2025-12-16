@@ -1,6 +1,8 @@
 import './App.css';
 import './styles/education.css';
 import './styles/stats.css';
+import './styles/scroll-progress.css';
+import './styles/services.css';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ContactUs } from './Contact';
@@ -11,9 +13,11 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Profile from './components/Profile';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollProgress from './components/ScrollProgress';
 import GitHubProjects from './components/GitHubProjects';
 import Stats from './components/Stats';
 import LinkedInSection from './components/LinkedInSection';
+import Services from './components/Services';
 import { SECTION_IDS } from './constants';
    
 function App() {
@@ -34,6 +38,7 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollProgress />
       <div id={SECTION_IDS.WELCOME}>
         <Header onLanguageChange={changeLanguage} />
         <Hero />
@@ -211,6 +216,9 @@ function App() {
     </div>
   </section>
 
+        {/* Services Section */}
+        <Services />
+
         {/* Portfolio Section */}
         <section
           id={SECTION_IDS.PORTFOLIO}
@@ -274,7 +282,7 @@ function App() {
                   </div>
                         <div className="single-contact-add-info">
                     <h3>Email : </h3>
-                    <p>a.chegdali@gmail.com.</p>
+                    <p><a href="mailto:a.chegdali01@gmail.com">a.chegdali01@gmail.com</a></p>
                   </div>
                 </div>
               </div>

@@ -115,5 +115,21 @@
     "certifications.git.description": "Version Control & Collaboration",
     "Veuillez entrer une adresse email valide.": "Please enter a valid email address.",
     "Le message doit contenir au moins 10 caractères.": "The message must contain at least 10 characters.",
-    "Message envoyé avec succès": "Message sent successfully"
+    "Message envoyé avec succès": "Message sent successfully",
+    "Envoi...": "Sending...",
+    "Une erreur est survenue, veuillez réessayer": "An error occurred, please try again",
+    "services.title": "Services",
+    "services.subtitle": "What I can do for you",
+    "services.web.development": "Web Development",
+    "services.web.description": "Creating modern and responsive web applications with the latest technologies",
+    "services.mobile.development": "Mobile Development",
+    "services.mobile.description": "Cross-platform mobile applications with Flutter for iOS and Android",
+    "services.backend.development": "Backend Development",
+    "services.backend.description": "REST APIs, microservices and cloud architectures with Spring Boot and Django",
+    "services.devops": "DevOps & Cloud",
+    "services.devops.description": "Deployment, CI/CD, Docker containerization and cloud infrastructure management",
+    "services.database": "Databases",
+    "services.database.description": "Design and optimization of SQL and NoSQL databases",
+    "services.business.intelligence": "Business Intelligence",
+    "services.bi.description": "Power BI dashboards and data analysis for decision making"
 }

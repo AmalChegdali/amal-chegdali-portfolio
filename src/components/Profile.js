@@ -54,7 +54,7 @@ const Profile = () => {
                   <div className="col-sm-4">
                     <div className="single-about-add-info">
                       <h3>email</h3>
-                      <p>a.chegdali@gmail.com</p>
+                      <p><a href="mailto:a.chegdali01@gmail.com">a.chegdali01@gmail.com</a></p>
                     </div>
                   </div>
                 </div>

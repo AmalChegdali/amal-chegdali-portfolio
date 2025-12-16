@@ -137,7 +137,7 @@ Ce projet est sous licence personnelle.
 **Amal Chegdali**
 - GitHub: [@AmalChegdali](https://github.com/AmalChegdali)
 - LinkedIn: [Amal Chegdali](https://www.linkedin.com/in/amal-chegdali-37a5b9239/)
-- Email: a.chegdali@gmail.com
+- Email: a.chegdali01@gmail.com
 
 ## 🙏 Remerciements
 

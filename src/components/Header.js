@@ -12,6 +12,7 @@ const Header = ({ onLanguageChange }) => {
     { href: '#education', label: 'Education' },
     { href: '#skills', label: t('Compétences') },
     { href: '#experience', label: t('Expérience') },
+    { href: '#services', label: t('services.title') || 'Services' },
     { href: '#portfolio', label: t('Projet') },
     { href: '#contact', label: 'Contact' },
   ];
